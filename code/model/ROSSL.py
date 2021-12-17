@@ -238,14 +238,14 @@ class ROSSL(nn.Module):
 
         std = torch.exp(0.5 * logvar)
         """"trunc laplace """
-        eps = torch.randn_like(std)
-        # eps = laplace.Laplace(0.0, 1.0).sample(std.shape).to(self.device)
-        # idx1 = torch.where(eps >= 2)
-        # idx2 = torch.where(eps <= -2)
-        # t1 = torch.tensor(truncnorm.rvs(-2, 2, size=len(idx1[0])), device='cuda').float()
-        # t2 = torch.tensor(truncnorm.rvs(-2, 2, size=len(idx2[0])), device='cuda').float()
-        # eps[idx1] = t1
-        # eps[idx2] = t2
+        #eps = torch.randn_like(std)
+        eps = laplace.Laplace(0.0, 1.0).sample(std.shape).to(self.device)
+        idx1 = torch.where(eps >= 2)
+        idx2 = torch.where(eps <= -2)
+        t1 = torch.tensor(truncnorm.rvs(-2, 2, size=len(idx1[0])), device='cuda').float()
+        t2 = torch.tensor(truncnorm.rvs(-2, 2, size=len(idx2[0])), device='cuda').float()
+        eps[idx1] = t1
+        eps[idx2] = t2
         return torch.addcmul(mean, eps, std)
 
     def deterministic_h(self, x_tm1):
