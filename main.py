@@ -6,15 +6,15 @@ import os
 import numpy as np
 import torch
 
-from code.utils import myconf
-from code.utils.logger import get_logger
+from Method.utils import myconf
+from Method.utils.logger import get_logger
 from torchvision.transforms import functional as F
-from code.learning_algo import LearningAlgorithm
-from code.gcn.config import args
-from code.utils.label_utils import reassign_labels, special_train_test_split
+from Method.learning_algo import LearningAlgorithm
+from Method.gcn.config import args
+from Method.utils.label_utils import reassign_labels, special_train_test_split
 import warnings
 from scipy.sparse import coo_matrix,csr_matrix
-from code.utils.data import preprocess_adj,preprocess_features
+from Method.utils.data import preprocess_adj,preprocess_features
 
 warnings.filterwarnings("ignore")
 

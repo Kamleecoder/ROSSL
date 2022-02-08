@@ -11,9 +11,9 @@ warnings.filterwarnings("ignore")
 from torch import nn
 import torch
 from collections import OrderedDict
-from code.gcn.model import GCN
+from Method.gcn.model import GCN
 from sklearn.metrics import roc_auc_score, accuracy_score, f1_score
-from code.utils.label_utils import reassign_labels
+from Method.utils.label_utils import reassign_labels
 import torch.nn.functional as F
 
 

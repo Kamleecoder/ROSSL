@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Software code-speech
+Software Method-speech
 Copyright Inria
 Year 2020
 Contact : xiaoyu.bie@inria.fr

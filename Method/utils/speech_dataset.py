@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Software code-speech
+Software Method-speech
 Copyright Inria
 Year 2020
 Contact : xiaoyu.bie@inria.fr
@@ -11,13 +11,13 @@ Class SpeechSequencesFull():
 - generate Pytorch dataloader
 - data sequence is clipped from the beginning of each audio signal
 - every speech sequence can be divided into multiple data sequences, as long as audio_len >= seq_len
-- usually, this code will give larger training sequences
+- usually, this Method will give larger training sequences
 
 Class SpeechSequencesRandom():
 - generate Pytorch dataloader
 - data sequence is clipped from a random place in each audio signal
 - every speech sequence can only be divided into one single data sequence
-- this code will introduce some randomness into training dataset
+- this Method will introduce some randomness into training dataset
 
 Both of these two Class use librosa.effects.trim()) to trim leading and trailing silence from an audio signal
 """

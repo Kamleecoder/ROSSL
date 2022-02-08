@@ -1,9 +1,9 @@
 import  torch
 from    torch import nn
 from    torch.nn import functional as F
-from    code.gcn.layer import GraphConvolution
+from    Method.gcn.layer import GraphConvolution
 
-from    code.gcn.config import args
+from    Method.gcn.config import args
 
 class GCN(nn.Module):
 

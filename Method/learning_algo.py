@@ -11,11 +11,11 @@ import os
 import shutil
 import socket
 import datetime
-from code.utils.logger import get_logger
+from Method.utils.logger import get_logger
 from .utils.read_config import myconf
-from code.gcn.config import args
-from code.model import build_ROSSL
-from code.gcn.utils import *
+from Method.gcn.config import args
+from Method.model import build_ROSSL
+from Method.gcn.utils import *
 
 
 class LearningAlgorithm():
